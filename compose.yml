@@ -3,16 +3,11 @@ version: "3"
 services:
  devopsdb:
    image: chandrikadevops/myy:dbimage
-   deploy:
-    replicas: 3
    ports:
      - "3306:3306"
 
  application:
    image: chandrikadevops/myy:appimage
-   container_name: containerapp
-   deploy:
-    replicas: 3
    ports:
      - "1224:8080"
    depends_on:
